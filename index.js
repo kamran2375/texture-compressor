@@ -6,9 +6,8 @@ const out_dir = 'output';
 
 if (fs.existsSync(in_dir)) {
     fs.readdir(in_dir, (err, items) => {
-        console.log(items);
         for (let i = 0; i < items.length; i++) {
-            compression(items[i])
+            compressor(items[i])
         }
     });
 } else {
